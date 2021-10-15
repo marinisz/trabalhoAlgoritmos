@@ -15,10 +15,6 @@ public class RetornaDados {
         return dados;
     }
 
-    public void setDados(List<String[]> dados) {
-        this.dados = dados;
-    }
-
     public static List<String[]> leitor(String path) throws IOException {
         BufferedReader buffRead = new BufferedReader(new FileReader(path));
         String linha = "";
@@ -26,6 +22,7 @@ public class RetornaDados {
         while (true) {
             if (linha != null) {
                 String[] dados = linha.split(",");
+                if(dados[0]!="")
                 retorno.add(dados);
             } else
                 break;
@@ -34,4 +31,5 @@ public class RetornaDados {
         buffRead.close();
         return retorno;
     }
+
 }
