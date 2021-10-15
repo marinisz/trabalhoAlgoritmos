@@ -1,4 +1,3 @@
-import buscador.RetornaDados;
 import exceptions.opcaoInvalidaException;
 import investimentos.Indicadores;
 
@@ -9,7 +8,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         //trás os dados do csv
         Indicadores indicador = new Indicadores();
-        indicador.retornoEfetivo();
+        indicador.trataDados();
         int opcao=-1;
         try {
             opcao = opcao();
