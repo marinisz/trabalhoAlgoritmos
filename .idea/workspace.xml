@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da1f23b4-9fd5-4d2d-923e-c685b62b48d6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/coletaDados/src/carteira/Ativo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coletaDados/src/carteira/Portifolio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coletaDados/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/coletaDados/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coletaDados/src/investimentos/Indicadores.java" beforeDir="false" afterPath="$PROJECT_DIR$/coletaDados/src/investimentos/Indicadores.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dados/dados.csv" beforeDir="false" afterPath="$PROJECT_DIR$/dados/dados.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/coletaDados/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coletaDados/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coletaDados/investimentos/Indicadores.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coletaDados/investimentos/Indicadores.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,23 +48,15 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\marin\Área de Trabalho\trabalhoAlgoritmos\coletaDados\src\carteira" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="coletaDados" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -90,6 +79,9 @@
       <workItem from="1634255624354" duration="3968000" />
       <workItem from="1634331020293" duration="3433000" />
       <workItem from="1634380550619" duration="4073000" />
+      <workItem from="1634409580931" duration="59000" />
+      <workItem from="1634409656905" duration="23000" />
+      <workItem from="1634419935978" duration="2333000" />
     </task>
     <servers />
   </component>
@@ -113,48 +105,16 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/coletaDados/src/investimentos/Indicadores.java</url>
-          <line>81</line>
-          <option name="timeStamp" value="23" />
+          <line>139</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/coletaDados/src/investimentos/Indicadores.java</url>
-          <line>82</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/coletaDados/src/investimentos/Indicadores.java</url>
-          <line>83</line>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/coletaDados/src/investimentos/Indicadores.java</url>
-          <line>80</line>
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/coletaDados/src/investimentos/Indicadores.java</url>
-          <line>72</line>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/coletaDados/src/investimentos/Indicadores.java</url>
-          <line>73</line>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/coletaDados/src/investimentos/Indicadores.java</url>
-          <line>74</line>
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/coletaDados/src/investimentos/Indicadores.java</url>
-          <line>75</line>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/coletaDados/src/investimentos/Indicadores.java</url>
-          <line>76</line>
-          <option name="timeStamp" value="40" />
+          <line>123</line>
+          <properties class="investimentos.Indicadores" method="calculaIndicadores">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
