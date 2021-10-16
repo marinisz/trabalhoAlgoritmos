@@ -6,16 +6,15 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        //trás os dados do csv
         Indicadores indicador = new Indicadores();
-        indicador.trataDados();
+        indicador.calculaIndicadores();
         int opcao=-1;
-        try {
-            opcao = opcao();
-            System.out.println("Gerando carteira com "+opcao+" ativos: ");
-        }catch (opcaoInvalidaException e) {
-            System.out.println(e);
-        }
+//        try {
+//            opcao = opcao();
+//            System.out.println("Gerando carteira com "+opcao+" ativos: ");
+//        }catch (opcaoInvalidaException e) {
+//            System.out.println(e);
+//        }
 
     }
     public static int opcao() throws opcaoInvalidaException {

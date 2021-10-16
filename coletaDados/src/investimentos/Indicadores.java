@@ -1,6 +1,7 @@
 package investimentos;
 
 import buscador.RetornaDados;
+import carteira.Ativo;
 
 import java.io.IOException;
 import java.util.*;
@@ -8,6 +9,9 @@ import java.util.*;
 public class Indicadores {
     RetornaDados buscado = new RetornaDados();
     List<String[]> dados = this.buscado.getDados();
+    List<ArrayList<String[]>> listaSeparada = this.trataDados();
+    List<Ativo> ativos = this.criaAtivos();
+
     public Indicadores() throws IOException {
     }
 
@@ -18,6 +22,12 @@ public class Indicadores {
     public List<String[]> getDados() {
         return dados;
     }
+
+    public List<ArrayList<String[]>> getListaSeparada() {
+        return listaSeparada;
+    }
+
+
 
     /**
      * Pega os dados e faz uma lista de listas, onde cada lista tem apenas dados ded um ativo;
@@ -44,15 +54,39 @@ public class Indicadores {
             }
             listasIndividuais.add(aux);
         }
-
         int contador =0;
-        for (String a:listasIndividuais.get(contador).get(contador)
-             ) {
-            System.out.println(a);
-            contador++;
-        }
         return listasIndividuais;
     }
 
+    public float retornoEfetivo(ArrayList<String[]> lista){
+        float precoCompra = Float.parseFloat(lista.get(0)[lista.get(0).length-2]);
+        float precoVenda =  Float.parseFloat(lista.get(lista.size()-1)[lista.get(lista.size()-1).length-2]);
+        float somaDividendos = 0;
+        for(String[] a : lista){
+            somaDividendos+=Float.parseFloat(a[a.length-1]);
+        }
+        float retornoEfetivoValor = ((somaDividendos+precoVenda)-precoCompra)/precoCompra;
+        return retornoEfetivoValor;
+    }
 
+    public List<Ativo> criaAtivos(){
+        List<Ativo> auxAtivos = new ArrayList<>();
+        for (ArrayList<String[]> a:listaSeparada){
+            Ativo ativo = new Ativo(a.get(0)[0]);
+            auxAtivos.add(ativo);
+        }
+        return auxAtivos;
+    }
+
+    public void calculaIndicadores(){
+        int contador = 0;
+        for(ArrayList<String[]> a : listaSeparada){
+            this.ativos.get(contador).setRetornoEfetivo(this.retornoEfetivo(a));
+            contador++;
+        }
+        for(Ativo ativo : ativos){
+            System.out.println(ativo.getRetornoEfetivo());
+        }
+
+    }
 }
