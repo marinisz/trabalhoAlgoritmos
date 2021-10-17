@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da1f23b4-9fd5-4d2d-923e-c685b62b48d6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/coletaDados/src/carteira/Portifolio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coletaDados/src/carteira/Ativo.java" beforeDir="false" afterPath="$PROJECT_DIR$/coletaDados/src/carteira/Ativo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coletaDados/src/investimentos/Indicadores.java" beforeDir="false" afterPath="$PROJECT_DIR$/coletaDados/src/investimentos/Indicadores.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coletaDados/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coletaDados/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +60,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
@@ -81,7 +91,8 @@
       <workItem from="1634380550619" duration="4073000" />
       <workItem from="1634409580931" duration="59000" />
       <workItem from="1634409656905" duration="23000" />
-      <workItem from="1634419935978" duration="2333000" />
+      <workItem from="1634419935978" duration="2590000" />
+      <workItem from="1634473486703" duration="5075000" />
     </task>
     <servers />
   </component>
@@ -99,24 +110,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/coletaDados/src/investimentos/Indicadores.java</url>
-          <line>139</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/coletaDados/src/investimentos/Indicadores.java</url>
-          <line>123</line>
-          <properties class="investimentos.Indicadores" method="calculaIndicadores">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

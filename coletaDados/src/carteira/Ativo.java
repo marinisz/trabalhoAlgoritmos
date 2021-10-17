@@ -1,10 +1,13 @@
 package carteira;
 
-public class Ativo {
+import java.util.ArrayList;
+
+public class Ativo{
     private String nome;
     private float retornoEfetivo=0;
     private float retornoEsperado=0;
     private float riscoAtivo=0;
+    private ArrayList<Integer> notas=new ArrayList<>();
 
     public Ativo(String nome){
         this.nome=nome;
@@ -40,5 +43,25 @@ public class Ativo {
 
     public void setRiscoAtivo(float riscoAtivo) {
         this.riscoAtivo = riscoAtivo;
+    }
+
+    public ArrayList<Integer> getNotas() {
+        return notas;
+    }
+
+    @Override
+    public String toString() {
+        String notas = "";
+        for(int nota : this.getNotas()){
+            notas+=nota+",";
+        }
+        notas = notas.substring(0,notas.length()-1);
+        return "Ativo{" +
+                "nome='" + nome + '\'' +
+                ", retornoEfetivo=" + retornoEfetivo +
+                ", retornoEsperado=" + retornoEsperado +
+                ", riscoAtivo=" + riscoAtivo +
+                ", notas=" + notas +
+                '}';
     }
 }

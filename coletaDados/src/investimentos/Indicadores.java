@@ -7,10 +7,10 @@ import java.io.IOException;
 import java.util.*;
 
 public class Indicadores {
-    RetornaDados buscado = new RetornaDados();
-    List<String[]> dados = this.buscado.getDados();
-    List<ArrayList<String[]>> listaSeparada = this.trataDados();
-    List<Ativo> ativos = this.criaAtivos();
+    private RetornaDados buscado = new RetornaDados();
+    private List<String[]> dados = this.buscado.getDados();
+    private List<ArrayList<String[]>> listaSeparada = this.trataDados();
+    private List<Ativo> ativos = this.criaAtivos();
     public Indicadores() throws IOException {
     }
 
@@ -75,10 +75,22 @@ public class Indicadores {
         return retornoEfetivoValor;
     }
 
+    /**
+     * mesma logica do retorno efetivo
+     * @param compra preco compra
+     * @param venda preco venda
+     * @param dividendos dividendos
+     * @return
+     */
     public float retornoEfetivoQualquer(float compra,float venda,float dividendos){
         return ((dividendos+venda)-compra)/compra;
     }
 
+    /**
+     * desvio padrao do retorno efetivo - esperado
+     * @param lista
+     * @return
+     */
     public float retornoEsperado(ArrayList<String[]> lista){
         float[] media = new float[lista.size()-1];
         float somaDividendos = 0;
@@ -134,9 +146,110 @@ public class Indicadores {
             //aumenta contador
             contador++;
         }
+        this.notas();
         for(Ativo ativo : ativos){
-            System.out.println(ativo.getRetornoEfetivo());
+            System.out.println(ativo);
         }
         return this.getAtivos();
     }
+
+    public void notas(){
+        String[] listaRetornoEfetivo = this.ordenaRetornoEfetivo();
+        String[] listaRetornoEsperado = this.ordenaRetornoEsperado();
+        String[] listaRisco = this.ordenaRisco();
+
+        //nota pelo retorno efetivo
+        for(int j =0;j<this.getAtivos().size();j++){
+            for(int i = 0;i<listaRetornoEfetivo.length;i++){
+                if(this.getAtivos().get(j).getNome().equals(listaRetornoEfetivo[i])){
+                    this.getAtivos().get(j).getNotas().add(i);
+                }
+            }
+        }
+        //nota pelo retorno esperado
+        for(int j =0;j<this.getAtivos().size();j++){
+            for(int i = 0;i<listaRetornoEsperado.length;i++){
+                if(this.getAtivos().get(j).getNome().equals(listaRetornoEsperado[i])){
+                    this.getAtivos().get(j).getNotas().add(i);
+                }
+            }
+        }
+        //nota pelo risco
+        for(int j =0;j<this.getAtivos().size();j++){
+            for(int i = 0;i<listaRisco.length;i++){
+                if(this.getAtivos().get(j).getNome().equals(listaRisco[i])){
+                    this.getAtivos().get(j).getNotas().add(i);
+                }
+            }
+        }
+    }
+
+    public String[] ordenaRetornoEfetivo(){
+        Ativo[] lista = viraArray();
+        String[] nomes = new String[lista.length];
+        for(int i=0;i< lista.length;i++){
+            for(int j=0;j< lista.length;j++) {
+                if (lista[j].getRetornoEfetivo() > lista[i].getRetornoEfetivo()) {
+                    Ativo aux = lista[i];
+                    lista[i]=lista[j];
+                    lista[j]=aux;
+                }
+            }
+        }
+        int contador = 0;
+        for(Ativo a : lista){
+            nomes[contador] = a.getNome();
+            contador++;
+        }
+        return nomes;
+    }
+    public String[] ordenaRetornoEsperado(){
+        Ativo[] lista = viraArray();
+        String[] nomes = new String[lista.length];
+        for(int i=0;i< lista.length;i++){
+            for(int j=0;j< lista.length;j++) {
+                if (lista[j].getRetornoEsperado() > lista[i].getRetornoEsperado()) {
+                    Ativo aux = lista[i];
+                    lista[i]=lista[j];
+                    lista[j]=aux;
+                }
+            }
+        }
+        int contador = 0;
+        for(Ativo a : lista){
+            nomes[contador] = a.getNome();
+            contador++;
+        }
+        return nomes;
+    }
+    public String[] ordenaRisco(){
+        Ativo[] lista = viraArray();
+        String[] nomes = new String[lista.length];
+        for(int i=0;i< lista.length;i++){
+            for(int j=0;j< lista.length;j++) {
+                if (lista[j].getRetornoEsperado() < lista[i].getRetornoEsperado()) {
+                    Ativo aux = lista[i];
+                    lista[i]=lista[j];
+                    lista[j]=aux;
+                }
+            }
+        }
+        int contador = 0;
+        for(Ativo a : lista){
+            nomes[contador] = a.getNome();
+            contador++;
+        }
+        return nomes;
+    }
+
+    public Ativo[] viraArray(){
+        Ativo[] array = new Ativo[this.getAtivos().size()];
+        int i = 0;
+        for(Ativo a : this.getAtivos()){
+            array[i]=a;
+            i++;
+        }
+        return array;
+    }
+
 }
