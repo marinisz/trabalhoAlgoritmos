@@ -49,6 +49,19 @@ public class Ativo{
         return notas;
     }
 
+    public float mediaConservador(){
+        float media = ((this.getNotas().get(0)*1)+(this.getNotas().get(1)*2)+(this.getNotas().get(2)*3));
+        return media;
+    }
+    public float mediaModerado(){
+        float media = ((this.getNotas().get(0)*2)+(this.getNotas().get(1)*2)+(this.getNotas().get(2)*2));
+        return media;
+    }
+    public float mediaAgressivo(){
+        float media = ((this.getNotas().get(0)*3)+(this.getNotas().get(1)*2)+(this.getNotas().get(2)*1));
+        return media;
+    }
+
     @Override
     public String toString() {
         String notas = "";

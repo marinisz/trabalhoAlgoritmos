@@ -149,6 +149,7 @@ public class Indicadores {
         this.notas();
         for(Ativo ativo : ativos){
             System.out.println(ativo);
+            System.out.println(ativo.mediaAgressivo());
         }
         return this.getAtivos();
     }
