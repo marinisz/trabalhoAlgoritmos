@@ -146,11 +146,37 @@ public class Indicadores {
             contador++;
         }
         this.notas();
-        for(Ativo ativo : ativos){
-            System.out.println(ativo);
-            System.out.println(ativo.mediaAgressivo());
-        }
         return this.getAtivos();
+    }
+
+    public Ativo[] retornaCarteira (int n){
+        this.calculaIndicadores();
+        Ativo[] aux = ordenaAtivos();
+        Ativo[] retorno = new Ativo[n];
+        for(int i = 0;i<n;i++){
+           retorno[i]=aux[i];
+        }
+        return retorno;
+    }
+
+    public Ativo[] ordenaAtivos(){
+        Ativo[] ordenado = new Ativo[ativos.size()];
+        int contador = 0;
+        for (Ativo a :ativos) {
+            ordenado[contador]=a;
+            contador++;
+        }
+
+        for(int j = 0;j<ordenado.length;j++){
+            for(int i = 0;i<ordenado.length;i++){
+                if(ordenado[j].mediaModerado()>ordenado[i].mediaModerado()){
+                    Ativo aux = ordenado[i];
+                    ordenado[i] = ordenado[j];
+                    ordenado[j]=aux;
+                }
+            }
+        }
+        return ordenado;
     }
 
     public void notas(){
@@ -227,7 +253,7 @@ public class Indicadores {
         String[] nomes = new String[lista.length];
         for(int i=0;i< lista.length;i++){
             for(int j=0;j< lista.length;j++) {
-                if (lista[j].getRetornoEsperado() < lista[i].getRetornoEsperado()) {
+                if (lista[j].getRetornoEsperado() > lista[i].getRetornoEsperado()) {
                     Ativo aux = lista[i];
                     lista[i]=lista[j];
                     lista[j]=aux;

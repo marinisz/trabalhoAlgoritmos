@@ -1,3 +1,4 @@
+import carteira.Portifolio;
 import exceptions.opcaoInvalidaException;
 import investimentos.Indicadores;
 
@@ -6,15 +7,15 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        Indicadores indicador = new Indicadores();
-        indicador.calculaIndicadores();
         int opcao=-1;
-//        try {
-//            opcao = opcao();
-//            System.out.println("Gerando carteira com "+opcao+" ativos: ");
-//        }catch (opcaoInvalidaException e) {
-//            System.out.println(e);
-//        }
+        try {
+            opcao = opcao();
+            System.out.println("Gerando carteira com "+opcao+" ativos: ");
+            Portifolio portifolio = new Portifolio(opcao);
+            System.out.println(portifolio);
+        }catch (opcaoInvalidaException e) {
+            System.out.println(e);
+        }
 
     }
     public static int opcao() throws opcaoInvalidaException {

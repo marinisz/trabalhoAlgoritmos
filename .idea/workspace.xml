@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="da1f23b4-9fd5-4d2d-923e-c685b62b48d6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coletaDados/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/coletaDados/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coletaDados/src/carteira/Portifolio.java" beforeDir="false" afterPath="$PROJECT_DIR$/coletaDados/src/carteira/Portifolio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coletaDados/src/investimentos/Indicadores.java" beforeDir="false" afterPath="$PROJECT_DIR$/coletaDados/src/investimentos/Indicadores.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coletaDados/investimentos/Indicadores.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coletaDados/investimentos/Indicadores.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +87,8 @@
       <workItem from="1634516406212" duration="1044000" />
       <workItem from="1634601979536" duration="9000" />
       <workItem from="1634726903769" duration="560000" />
+      <workItem from="1634738163948" duration="276000" />
+      <workItem from="1634765419847" duration="6132000" />
     </task>
     <servers />
   </component>
@@ -101,5 +106,36 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/coletaDados/src/carteira/Portifolio.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/coletaDados/src/carteira/Portifolio.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/coletaDados/src/carteira/Portifolio.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/coletaDados/src/carteira/Portifolio.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/coletaDados/src/carteira/Portifolio.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
