@@ -48,7 +48,6 @@ public class Portifolio {
         geraRetorno();
         geraRisco();
     }
-
     public void geraRetorno(){
         float somatorio=0;
         for (Ativo a :ativos) {
@@ -66,11 +65,11 @@ public class Portifolio {
 
     @Override
     public String toString() {
-        String retorno = "|";
+        String retorno = "| ";
         for (Ativo a:getAtivos()){
-            retorno+=a.getNome()+"|";
+            retorno+=a.getNome()+" | ";
         }
         retorno+="\nRisco: "+this.getRisco()+"\nRetorno: "+this.getRetorno();
-        return retorno;
+        return retorno.toUpperCase();
     }
 }

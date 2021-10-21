@@ -94,7 +94,7 @@ public class Indicadores {
     public float retornoEsperado(ArrayList<String[]> lista){
         float[] media = new float[lista.size()-1];
         for(int i=0;i<media.length;i++){
-            float somaDividendos = Float.parseFloat(lista.get(i+1)[lista.get(i+1).length-1]);
+            float somaDividendos = Float.parseFloat(lista.get(i)[lista.get(i).length-1]);
             float precoCompra = Float.parseFloat(lista.get(i)[lista.get(i).length-3]);
             float precoVenda = (Float.parseFloat(lista.get(i)[lista.get(i).length-2]));
             media[i]=retornoEfetivoQualquer(precoCompra,precoVenda,somaDividendos);
@@ -149,6 +149,10 @@ public class Indicadores {
         return this.getAtivos();
     }
 
+    /**
+     * Gera uma carteira com n ativos
+     * @param n - numero de ativos
+     */
     public Ativo[] retornaCarteira (int n){
         this.calculaIndicadores();
         Ativo[] aux = ordenaAtivos();
@@ -159,6 +163,10 @@ public class Indicadores {
         return retorno;
     }
 
+    /**
+     * Ordena pela média baseada no perfil (normal é moderado)
+     * @return
+     */
     public Ativo[] ordenaAtivos(){
         Ativo[] ordenado = new Ativo[ativos.size()];
         int contador = 0;
