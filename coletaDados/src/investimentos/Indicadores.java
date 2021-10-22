@@ -93,10 +93,10 @@ public class Indicadores {
      */
     public float retornoEsperado(ArrayList<String[]> lista){
         float[] media = new float[lista.size()-1];
-        for(int i=0;i<media.length;i++){
+        for(int i=0;i<media.length-1;i++){
             float somaDividendos = Float.parseFloat(lista.get(i)[lista.get(i).length-1]);
-            float precoCompra = Float.parseFloat(lista.get(i)[lista.get(i).length-3]);
-            float precoVenda = (Float.parseFloat(lista.get(i)[lista.get(i).length-2]));
+            float precoCompra = Float.parseFloat(lista.get(i)[lista.get(i).length-2]);
+            float precoVenda = (Float.parseFloat(lista.get(i+1)[lista.get(i).length-2]));
             media[i]=retornoEfetivoQualquer(precoCompra,precoVenda,somaDividendos);
         }
         float soma=0;
