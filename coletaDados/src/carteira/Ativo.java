@@ -50,16 +50,16 @@ public class Ativo{
     }
 
     public float mediaConservador(){
-        float media = ((this.getNotas().get(0)*1)+(this.getNotas().get(1)*2)+(this.getNotas().get(2)*3));
-        return media;
+        float media = ((this.getNotas().get(0)*1)+(this.getNotas().get(1)*1)+(this.getNotas().get(2)*4));
+        return media/6;
     }
     public float mediaModerado(){
         float media = ((this.getNotas().get(0)*2)+(this.getNotas().get(1)*2)+(this.getNotas().get(2)*2));
-        return media;
+        return media/6;
     }
     public float mediaAgressivo(){
-        float media = ((this.getNotas().get(0)*3)+(this.getNotas().get(1)*2)+(this.getNotas().get(2)*1));
-        return media;
+        float media = ((this.getNotas().get(0)*3)+(this.getNotas().get(1)*3)+(this.getNotas().get(2)*0));
+        return media/6;
     }
 
     @Override

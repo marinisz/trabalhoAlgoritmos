@@ -3,24 +3,19 @@ package carteira;
 import investimentos.Indicadores;
 
 import java.io.IOException;
-import java.util.Arrays;
 
 public class Portifolio {
     private Ativo[] ativos;
     private float retorno = 0;
     private float risco = 0;
 
-    public Portifolio(int n) throws IOException {
+    public Portifolio(int n,int tipo) throws IOException {
         this.ativos = new Ativo[n];
-        geraPortifolio(n);
+        geraPortifolio(n,tipo);
     }
 
     public Ativo[] getAtivos() {
         return ativos;
-    }
-
-    public void setAtivos(Ativo[] ativos) {
-        this.ativos = ativos;
     }
 
     public float getRetorno() {
@@ -39,9 +34,19 @@ public class Portifolio {
         this.risco = risco;
     }
 
-    public void geraPortifolio(int quantidade) throws IOException {
+    public void geraPortifolio(int quantidade,int tipo) throws IOException {
         Indicadores indicadores = new Indicadores();
-        Ativo[] todos = indicadores.retornaCarteira(quantidade);
+        Ativo[] todos=null;
+        if(tipo==1){
+            todos = indicadores.retornaCarteiraConservadora(quantidade);
+        }
+        else if(tipo==2){
+            todos = indicadores.retornaCarteiraModerada(quantidade);
+        }
+        else if(tipo==3){
+            todos = indicadores.retornaCarteiraAgressiva(quantidade);
+        }
+
         for(int i =0;i<ativos.length;i++){
             this.ativos[i]=todos[i];
         }

@@ -95,8 +95,8 @@ public class Indicadores {
         float[] media = new float[lista.size()-1];
         for(int i=0;i<media.length-1;i++){
             float somaDividendos = Float.parseFloat(lista.get(i)[lista.get(i).length-1]);
-            float precoCompra = Float.parseFloat(lista.get(i)[lista.get(i).length-2]);
-            float precoVenda = (Float.parseFloat(lista.get(i+1)[lista.get(i).length-2]));
+            float precoCompra = Float.parseFloat(lista.get(i)[lista.get(i).length-3]);
+            float precoVenda = (Float.parseFloat(lista.get(i+1)[lista.get(i).length-3]));
             media[i]=retornoEfetivoQualquer(precoCompra,precoVenda,somaDividendos);
         }
         float soma=0;
@@ -153,21 +153,47 @@ public class Indicadores {
      * Gera uma carteira com n ativos
      * @param n - numero de ativos
      */
-    public Ativo[] retornaCarteira (int n){
+    public Ativo[] retornaCarteiraConservadora(int n){
         this.calculaIndicadores();
-        Ativo[] aux = ordenaAtivos();
+        Ativo[] aux = ordenaAtivosConservador();
         Ativo[] retorno = new Ativo[n];
         for(int i = 0;i<n;i++){
            retorno[i]=aux[i];
         }
         return retorno;
     }
+    /**
+     * Gera uma carteira com n ativos
+     * @param n - numero de ativos
+     */
+    public Ativo[] retornaCarteiraModerada(int n){
+        this.calculaIndicadores();
+        Ativo[] aux = ordenaAtivosModerado();
+        Ativo[] retorno = new Ativo[n];
+        for(int i = 0;i<n;i++){
+            retorno[i]=aux[i];
+        }
+        return retorno;
+    }
+    /**
+     * Gera uma carteira com n ativos
+     * @param n - numero de ativos
+     */
+    public Ativo[] retornaCarteiraAgressiva(int n){
+        this.calculaIndicadores();
+        Ativo[] aux = ordenaAtivosAgressivo();
+        Ativo[] retorno = new Ativo[n];
+        for(int i = 0;i<n;i++){
+            retorno[i]=aux[i];
+        }
+        return retorno;
+    }
 
     /**
-     * Ordena pela média baseada no perfil (normal é moderado)
+     * Ordena pela média baseada no perfil
      * @return
      */
-    public Ativo[] ordenaAtivos(){
+    public Ativo[] ordenaAtivosModerado(){
         Ativo[] ordenado = new Ativo[ativos.size()];
         int contador = 0;
         for (Ativo a :ativos) {
@@ -178,6 +204,46 @@ public class Indicadores {
         for(int j = 0;j<ordenado.length;j++){
             for(int i = 0;i<ordenado.length;i++){
                 if(ordenado[j].mediaModerado()>ordenado[i].mediaModerado()){
+                    Ativo aux = ordenado[i];
+                    ordenado[i] = ordenado[j];
+                    ordenado[j]=aux;
+                }
+            }
+        }
+        return ordenado;
+    }
+
+    public Ativo[] ordenaAtivosConservador(){
+        Ativo[] ordenado = new Ativo[ativos.size()];
+        int contador = 0;
+        for (Ativo a :ativos) {
+            ordenado[contador]=a;
+            contador++;
+        }
+
+        for(int j = 0;j<ordenado.length;j++){
+            for(int i = 0;i<ordenado.length;i++){
+                if(ordenado[j].mediaConservador()>ordenado[i].mediaConservador()){
+                    Ativo aux = ordenado[i];
+                    ordenado[i] = ordenado[j];
+                    ordenado[j]=aux;
+                }
+            }
+        }
+        return ordenado;
+    }
+
+    public Ativo[] ordenaAtivosAgressivo(){
+        Ativo[] ordenado = new Ativo[ativos.size()];
+        int contador = 0;
+        for (Ativo a :ativos) {
+            ordenado[contador]=a;
+            contador++;
+        }
+
+        for(int j = 0;j<ordenado.length;j++){
+            for(int i = 0;i<ordenado.length;i++){
+                if(ordenado[j].mediaAgressivo()>ordenado[i].mediaAgressivo()){
                     Ativo aux = ordenado[i];
                     ordenado[i] = ordenado[j];
                     ordenado[j]=aux;
@@ -261,7 +327,7 @@ public class Indicadores {
         String[] nomes = new String[lista.length];
         for(int i=0;i< lista.length;i++){
             for(int j=0;j< lista.length;j++) {
-                if (lista[j].getRetornoEsperado() > lista[i].getRetornoEsperado()) {
+                if (lista[j].getRiscoAtivo() < lista[i].getRiscoAtivo()) {
                     Ativo aux = lista[i];
                     lista[i]=lista[j];
                     lista[j]=aux;
