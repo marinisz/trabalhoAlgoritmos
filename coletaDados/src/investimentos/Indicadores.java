@@ -212,7 +212,10 @@ public class Indicadores {
         }
         return ordenado;
     }
-
+    /**
+     * Ordena pela média baseada no perfil
+     * @return
+     */
     public Ativo[] ordenaAtivosConservador(){
         Ativo[] ordenado = new Ativo[ativos.size()];
         int contador = 0;
@@ -232,7 +235,10 @@ public class Indicadores {
         }
         return ordenado;
     }
-
+    /**
+     * Ordena pela média baseada no perfil
+     * @return
+     */
     public Ativo[] ordenaAtivosAgressivo(){
         Ativo[] ordenado = new Ativo[ativos.size()];
         int contador = 0;
@@ -253,6 +259,9 @@ public class Indicadores {
         return ordenado;
     }
 
+    /**
+     * Pega os indices dos ativos e os ordena na ordem crescente.
+     */
     public void notas(){
         String[] listaRetornoEfetivo = this.ordenaRetornoEfetivo();
         String[] listaRetornoEsperado = this.ordenaRetornoEsperado();
@@ -262,7 +271,7 @@ public class Indicadores {
         for(int j =0;j<this.getAtivos().size();j++){
             for(int i = 0;i<listaRetornoEfetivo.length;i++){
                 if(this.getAtivos().get(j).getNome().equals(listaRetornoEfetivo[i])){
-                    this.getAtivos().get(j).getNotas().add(i);
+                    this.getAtivos().get(j).getNotas().add(i+1);
                 }
             }
         }
@@ -270,7 +279,7 @@ public class Indicadores {
         for(int j =0;j<this.getAtivos().size();j++){
             for(int i = 0;i<listaRetornoEsperado.length;i++){
                 if(this.getAtivos().get(j).getNome().equals(listaRetornoEsperado[i])){
-                    this.getAtivos().get(j).getNotas().add(i);
+                    this.getAtivos().get(j).getNotas().add(i+1);
                 }
             }
         }
@@ -278,12 +287,16 @@ public class Indicadores {
         for(int j =0;j<this.getAtivos().size();j++){
             for(int i = 0;i<listaRisco.length;i++){
                 if(this.getAtivos().get(j).getNome().equals(listaRisco[i])){
-                    this.getAtivos().get(j).getNotas().add(i);
+                    this.getAtivos().get(j).getNotas().add(i+1);
                 }
             }
         }
     }
 
+    /**
+     * Ordena os ativos se baseando no maior retorno efetivo como nota 10
+     * @return array de string com os ativos em ordem
+     */
     public String[] ordenaRetornoEfetivo(){
         Ativo[] lista = viraArray();
         String[] nomes = new String[lista.length];
@@ -303,6 +316,10 @@ public class Indicadores {
         }
         return nomes;
     }
+    /**
+     * Ordena os ativos se baseando no maior retorno esperado como nota 10
+     * @return array de string com os ativos em ordem
+     */
     public String[] ordenaRetornoEsperado(){
         Ativo[] lista = viraArray();
         String[] nomes = new String[lista.length];
@@ -322,6 +339,10 @@ public class Indicadores {
         }
         return nomes;
     }
+    /**
+     * Ordena os ativos se baseando no menor risco como nota 10
+     * @return array de string com os ativos em ordem
+     */
     public String[] ordenaRisco(){
         Ativo[] lista = viraArray();
         String[] nomes = new String[lista.length];
@@ -342,6 +363,10 @@ public class Indicadores {
         return nomes;
     }
 
+    /**
+     * Transforma uma lista em array
+     * @return array de ativos
+     */
     public Ativo[] viraArray(){
         Ativo[] array = new Ativo[this.getAtivos().size()];
         int i = 0;

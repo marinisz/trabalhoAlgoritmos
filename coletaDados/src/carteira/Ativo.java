@@ -49,6 +49,8 @@ public class Ativo{
         return notas;
     }
 
+    //Calculo de medias  (baseando nas notas)
+
     public float mediaConservador(){
         float media = ((this.getNotas().get(0)*1)+(this.getNotas().get(1)*1)+(this.getNotas().get(2)*4));
         return media/6;

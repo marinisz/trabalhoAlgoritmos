@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da1f23b4-9fd5-4d2d-923e-c685b62b48d6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coletaDados/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/coletaDados/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coletaDados/src/carteira/Ativo.java" beforeDir="false" afterPath="$PROJECT_DIR$/coletaDados/src/carteira/Ativo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coletaDados/src/carteira/Portifolio.java" beforeDir="false" afterPath="$PROJECT_DIR$/coletaDados/src/carteira/Portifolio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coletaDados/src/investimentos/Indicadores.java" beforeDir="false" afterPath="$PROJECT_DIR$/coletaDados/src/investimentos/Indicadores.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coletaDados/investimentos/Indicadores.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coletaDados/investimentos/Indicadores.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +92,7 @@
       <workItem from="1634940937422" duration="93000" />
       <workItem from="1634941241379" duration="34000" />
       <workItem from="1635549107002" duration="600000" />
-      <workItem from="1636068716421" duration="2578000" />
+      <workItem from="1636068716421" duration="2949000" />
     </task>
     <servers />
   </component>
@@ -126,14 +122,6 @@
           </properties>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/coletaDados/src/investimentos/Indicadores.java</url>
-          <line>255</line>
-          <properties class="investimentos.Indicadores" method="notas">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/coletaDados/src/carteira/Portifolio.java</url>
           <line>12</line>
@@ -146,7 +134,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/coletaDados/src/investimentos/Indicadores.java</url>
-          <line>306</line>
+          <line>319</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
