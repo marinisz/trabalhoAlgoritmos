@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da1f23b4-9fd5-4d2d-923e-c685b62b48d6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/coletaDados/src/carteira/Ativo.java" beforeDir="false" afterPath="$PROJECT_DIR$/coletaDados/src/carteira/Ativo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coletaDados/src/investimentos/Indicadores.java" beforeDir="false" afterPath="$PROJECT_DIR$/coletaDados/src/investimentos/Indicadores.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coletaDados/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/coletaDados/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coletaDados/src/exceptions/opcaoInvalidaException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coletaDados/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coletaDados/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coletaDados/exceptions/opcaoInvalidaException.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +62,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
@@ -92,7 +106,8 @@
       <workItem from="1634940937422" duration="93000" />
       <workItem from="1634941241379" duration="34000" />
       <workItem from="1635549107002" duration="600000" />
-      <workItem from="1636068716421" duration="2949000" />
+      <workItem from="1636068716421" duration="3249000" />
+      <workItem from="1636150547186" duration="705000" />
     </task>
     <servers />
   </component>
@@ -134,7 +149,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/coletaDados/src/investimentos/Indicadores.java</url>
-          <line>319</line>
+          <line>323</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
