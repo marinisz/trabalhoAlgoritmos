@@ -22,9 +22,9 @@ public class Main {
 //                }
 //            }
 //            System.out.println("Gerando carteira com "+opcao+" ativos: ");
-            Portifolio portifolio1 = new Portifolio(6,1);
-            Portifolio portifolio2 = new Portifolio(6,2);
-            Portifolio portifolio3 = new Portifolio(6,3);
+            Portifolio portifolio1 = new Portifolio(3,1);
+            Portifolio portifolio2 = new Portifolio(3,2);
+            Portifolio portifolio3 = new Portifolio(3,3);
             System.out.println(portifolio1);
             System.out.println();
             System.out.println(portifolio2);
