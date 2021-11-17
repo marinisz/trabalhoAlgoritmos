@@ -56,12 +56,12 @@ public class Ativo{
         return media/6;
     }
     public float mediaModerado(){
-        float media = ((this.getNotas().get(0)*2)+(this.getNotas().get(1)*2)+(this.getNotas().get(2)*2));
-        return media/6;
+        float media = ((this.getNotas().get(0))+(this.getNotas().get(1))+(this.getNotas().get(2)));
+        return media/3;
     }
     public float mediaAgressivo(){
-        float media = ((this.getNotas().get(0)*3)+(this.getNotas().get(1)*3)+(this.getNotas().get(2)*0));
-        return media/6;
+        float media = ((this.getNotas().get(0))+(this.getNotas().get(1)));
+        return media/2;
     }
 
     @Override

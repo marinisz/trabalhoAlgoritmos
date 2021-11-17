@@ -7,25 +7,14 @@ import java.io.IOException;
 import java.util.*;
 
 public class Indicadores {
-    private RetornaDados buscado = new RetornaDados();
-    private List<String[]> dados = this.buscado.getDados();
-    private List<ArrayList<String[]>> listaSeparada = this.trataDados();
-    private List<Ativo> ativos = this.criaAtivos();
+    private RetornaDados buscado = new RetornaDados();//classe que busca dados
+    private List<String[]> dados = this.buscado.getDados();//dados buscados do bd
+    private List<ArrayList<String[]>> listaSeparada = this.trataDados();//lista de lista com todos os dados de cada ativo em certo periodo
+    private List<Ativo> ativos = this.criaAtivos();//lista com os ativos encontrados (geral)
     public Indicadores() throws IOException {
     }
 
-    public RetornaDados getBuscado() {
-        return buscado;
-    }
-
-    public List<String[]> getDados() {
-        return dados;
-    }
-
-    public List<ArrayList<String[]>> getListaSeparada() {
-        return listaSeparada;
-    }
-
+    //getters
     public List<Ativo> getAtivos() {
         return ativos;
     }
@@ -107,9 +96,15 @@ public class Indicadores {
         return mediaTotal;
     }
 
-    public float riscoAtivo(Ativo ativo){
-        float subtracao = ativo.getRetornoEfetivo()-ativo.getRetornoEsperado();
-        float resultado = (float) Math.sqrt(Math.pow(subtracao,2));
+    /**
+     *
+     * @param rtEsperado
+     * @param rtEfetivo
+     * @return
+     */
+    public float riscoAtivo(float rtEsperado,float rtEfetivo){
+        float primeira = rtEfetivo-rtEsperado;
+        float resultado = (float) Math.sqrt(rtEsperado*Math.pow(primeira,2));
         return resultado;
     }
 
@@ -140,7 +135,7 @@ public class Indicadores {
             //retorno esperado
             this.ativos.get(contador).setRetornoEsperado(this.retornoEsperado(a));
             //risco do ativo
-            this.ativos.get(contador).setRiscoAtivo(this.riscoAtivo(this.ativos.get(contador)));
+            this.ativos.get(contador).setRiscoAtivo(this.riscoAtivo(this.ativos.get(contador).getRetornoEsperado(),this.ativos.get(contador).getRetornoEfetivo()));
 
             //aumenta contador
             contador++;
