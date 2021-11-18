@@ -5,4 +5,4 @@ pequena base de dados real do mercado imobiliário.
 
 # Docker
 
-docker pull marinisz/algoritmos:tagname
+docker pull marinisz/algoritmos
