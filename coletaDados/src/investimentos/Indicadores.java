@@ -185,6 +185,21 @@ public class Indicadores {
     }
 
     /**
+     * Gera uma carteira aleatoria
+     * @param n
+     * @return
+     */
+    public Ativo[] retornaCarteiraAleatoria(int n){
+        this.calculaIndicadores();
+        Ativo[] ativoArray = ordenaAleatorio();
+        Ativo[] retorno = new Ativo[n];
+        for(int i = 0;i<n;i++){
+            retorno[i]=ativoArray[i];
+        }
+        return retorno;
+    }
+
+    /**
      * Ordena pela média baseada no perfil
      * @return
      */
@@ -250,6 +265,29 @@ public class Indicadores {
                     ordenado[j]=aux;
                 }
             }
+        }
+        return ordenado;
+    }
+
+    /**
+     * Ordena aleatoriamente
+     * @return
+     */
+    public Ativo[] ordenaAleatorio(){
+        Ativo[] ordenado = new Ativo[ativos.size()];
+        int contador = 0;
+        for (Ativo a :ativos) {
+            ordenado[contador]=a;
+            contador++;
+        }
+        List<Ativo> ativosAux = ativos;
+        for(int i=0;i<ativosAux.size();i++){
+            int min_val = 0;
+            int max_val = ativos.size();
+            Random ran = new Random();
+            int x = ran.nextInt(max_val) + min_val;
+            ordenado[i]=ativosAux.get(x);
+            ativosAux.remove(x);
         }
         return ordenado;
     }

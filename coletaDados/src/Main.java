@@ -5,13 +5,13 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        String[] array = {"conservadora","moderada","agressiva"};
+        String[] array = {"conservadora","moderada","agressiva","aleatoria"};
         int quantidadeAtivos=-1;
             while(quantidadeAtivos<1||quantidadeAtivos>10){
                 quantidadeAtivos = quantidadeAtivos();
             }
         int tipo = -1;
-            while(tipo<1 || tipo >3){
+            while(tipo<1 || tipo >4){
                 tipo = tipoPerfil();
             }
         System.out.println("\nGerando carteira de perfil "+array[tipo-1]+" com "+quantidadeAtivos+" ativos: ");
@@ -36,7 +36,7 @@ public class Main {
         int tipo = -1;
         Scanner teclado = new Scanner(System.in);
         System.out.println("Qual seu perfil de investidor?");
-        System.out.print("1 - Conservador\n2 - Moderado\n3 - Agressivo\nMeu perfil: ");
+        System.out.print("1 - Conservador\n2 - Moderado\n3 - Agressivo\n4 - Carteira Aleatória\nMeu perfil: ");
         tipo = teclado.nextInt();
         if(tipo<1 || tipo >3){
             System.out.println("Opção inválida");
