@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da1f23b4-9fd5-4d2d-923e-c685b62b48d6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coletaDados/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/coletaDados/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coletaDados/src/carteira/Portifolio.java" beforeDir="false" afterPath="$PROJECT_DIR$/coletaDados/src/carteira/Portifolio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coletaDados/src/investimentos/Indicadores.java" beforeDir="false" afterPath="$PROJECT_DIR$/coletaDados/src/investimentos/Indicadores.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +98,7 @@
       <workItem from="1637185382775" duration="2310000" />
       <workItem from="1637253229385" duration="297000" />
       <workItem from="1637253556219" duration="3000" />
-      <workItem from="1637521902190" duration="1525000" />
+      <workItem from="1637521902190" duration="1906000" />
     </task>
     <servers />
   </component>
@@ -131,6 +128,67 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/coletaDados/src/investimentos/Indicadores.java</url>
+          <line>191</line>
+          <properties class="investimentos.Indicadores" method="retornaCarteiraAleatoria">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/coletaDados/src/investimentos/Indicadores.java</url>
+          <line>275</line>
+          <properties class="investimentos.Indicadores" method="ordenaAleatorio">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/coletaDados/src/carteira/Portifolio.java</url>
+          <line>58</line>
+          <properties class="carteira.Portifolio" method="geraRetorno">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/coletaDados/src/carteira/Portifolio.java</url>
+          <line>65</line>
+          <properties class="carteira.Portifolio" method="geraRisco">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/coletaDados/src/investimentos/Indicadores.java</url>
+          <line>198</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/coletaDados/src/carteira/Portifolio.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/coletaDados/src/carteira/Portifolio.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/coletaDados/src/carteira/Portifolio.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/coletaDados/src/carteira/Portifolio.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="this.ativos.get(7)" />

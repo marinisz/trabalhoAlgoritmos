@@ -17,7 +17,6 @@ public class Main {
         System.out.println("\nGerando carteira de perfil "+array[tipo-1]+" com "+quantidadeAtivos+" ativos: ");
         Portifolio portifolio1 = new Portifolio(quantidadeAtivos,tipo);
         System.out.println(portifolio1);
-            //para mudar o perfil tem que ir no indicadores na linha 158
 //
 
     }
