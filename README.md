@@ -11,9 +11,11 @@ O presente trabalho está tem como objetivo o de construir uma ferramenta comput
 5. Três métodos de ordenação para criar o portifólio, conservador, moderado e agressivo.
   - Conservador -> baixo risco;
   - Moderado -> mesmo peso para todos indicadores;
-  - Agressovp -> foco na rentabilidade
+  - Agressivo -> foco na rentabilidade
 6. O usuário escolhe a quantidade de ativos e o seu perfil;
 7. O programa gera um portifólio e calcula seu risco e retorno;
+
+(obs: considerei os indicadores comprando e vendendo de um dia para o outro)
 
 # Docker
 
