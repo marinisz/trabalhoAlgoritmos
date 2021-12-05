@@ -8,7 +8,7 @@ O presente trabalho está tem como objetivo o de construir uma ferramenta comput
 2. Percorre o csv armazenando ações de mesmo papel em lista de listas;
 3. Percorre cada lista gerando os indicadores.
 4. Com os indicadores registrados, gera uma nota para cada ativo de 0 à 9 baseando em cada indicativo;
-5. Três métodos de ordenação para criar o portifólio, conservador, moderado e agressivo.
+5. Quatro métodos de ordenação para criar o portifólio, conservador, moderado , agressivo e bruto.
   - Conservador -> baixo risco;
   - Moderado -> mesmo peso para todos indicadores;
   - Agressivo -> foco na rentabilidade
