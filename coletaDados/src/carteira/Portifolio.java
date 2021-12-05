@@ -49,6 +49,9 @@ public class Portifolio {
         else if(tipo==4){
             todos = indicadores.retornaCarteiraAleatoria(quantidade);
         }
+        else if(tipo==5){
+            todos = indicadores.retornaCarteiraBruta(quantidade);
+        }
 
         for(int i =0;i<ativos.length;i++){
             this.ativos[i]=todos[i];
@@ -70,6 +73,7 @@ public class Portifolio {
         }
         this.setRisco(somatorio);
     }
+
 
     @Override
     public String toString() {

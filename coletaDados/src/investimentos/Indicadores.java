@@ -2,6 +2,7 @@ package investimentos;
 
 import buscador.RetornaDados;
 import carteira.Ativo;
+import carteira.Portifolio;
 
 import java.io.IOException;
 import java.util.*;
@@ -199,6 +200,30 @@ public class Indicadores {
         return retorno;
     }
 
+    public Ativo[] retornaCarteiraBruta(int n) throws IOException {
+        this.calculaIndicadores();
+        float melhor = 0;
+        Portifolio retorno = null;
+        int vezes = fatorial(n);
+        for(int i=0;i<vezes;i++){
+            Portifolio atual = new Portifolio(n,4);
+            if(atual.getRetorno()>melhor){
+                retorno = atual;
+            }
+        }
+        return retorno.getAtivos();
+    }
+
+    public static int fatorial( int numero ) {
+        int fact = 1;
+        for( int i = 1; i <= numero; i++ ) {
+            fact *= i;
+        }
+
+        return fact;
+
+    }
+
     /**
      * Ordena pela média baseada no perfil
      * @return
@@ -291,6 +316,7 @@ public class Indicadores {
         }
         return ordenado;
     }
+
 
     /**
      * Pega os indices dos ativos e os ordena na ordem crescente.
