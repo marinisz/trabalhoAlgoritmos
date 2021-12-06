@@ -99,14 +99,30 @@ public class Indicadores {
 
     /**
      *
-     * @param rtEsperado
-     * @param rtEfetivo
+     * @param lista de ativos
      * @return
      */
-    public float riscoAtivo(float rtEsperado,float rtEfetivo){
-        float primeira = rtEfetivo-rtEsperado;
-        float resultado = (float) Math.sqrt(rtEsperado*Math.pow(primeira,2));
-        return resultado;
+    public float riscoAtivo(ArrayList<String[]> lista){
+        double soma = 0; // soma dos elementos
+        double desvioPadrao = 0D; // desvio padrão
+        int tam = lista.size(); // tamanho dos dados
+
+        // vamos somar todos os elementos
+        for(int i = 0; i < tam-1; i++){
+            double valor = Float.parseFloat(lista.get(i+1)[2]);
+            soma = soma + valor;
+        }
+        // agora obtemos a média do conjunto de dados
+        double media = soma / tam;
+
+        // e finalmente obtemos o desvio padrão
+        for(int i = 0; i < tam; i++){
+            double parcela = (Float.parseFloat(lista.get(i)[2])) - media;
+            desvioPadrao +=Math.pow(parcela,2);
+        }
+
+
+        return (float) (Math.sqrt((desvioPadrao/(tam)))/media);
     }
 
     /**
@@ -136,9 +152,7 @@ public class Indicadores {
             //retorno esperado
             this.ativos.get(contador).setRetornoEsperado(this.retornoEsperado(a));
             //risco do ativo
-            this.ativos.get(contador).setRiscoAtivo(this.riscoAtivo(this.ativos.get(contador).getRetornoEsperado(),this.ativos.get(contador).getRetornoEfetivo()));
-
-            //aumenta contador
+            this.ativos.get(contador).setRiscoAtivo(this.riscoAtivo(a));
             contador++;
         }
         this.notas();
@@ -203,25 +217,19 @@ public class Indicadores {
     public Ativo[] retornaCarteiraBruta(int n) throws IOException {
         this.calculaIndicadores();
         float melhor = 0;
-        Portifolio retorno = null;
-        int vezes = fatorial(n);
+        Portifolio retorno = new Portifolio(n,4);
+        int vezes=n;
+        for(int i = n-1;i>0;i--) {
+            vezes = vezes*i;
+        }
         for(int i=0;i<vezes;i++){
             Portifolio atual = new Portifolio(n,4);
             if(atual.getRetorno()>melhor){
-                retorno = atual;
+                Portifolio aux = atual;
+                retorno = aux;
             }
         }
         return retorno.getAtivos();
-    }
-
-    public static int fatorial( int numero ) {
-        int fact = 1;
-        for( int i = 1; i <= numero; i++ ) {
-            fact *= i;
-        }
-
-        return fact;
-
     }
 
     /**
