@@ -20,7 +20,7 @@ O presente trabalho está tem como objetivo o de construir uma ferramenta comput
 
 # Docker
 
-docker pull marinisz/algoritmos:1.0
+docker pull marinisz/algoritmos:2.0
 
 
 ![image](https://user-images.githubusercontent.com/57442852/142782536-1c5764f7-f96c-4e59-b819-ca73ba7c64ba.png)
