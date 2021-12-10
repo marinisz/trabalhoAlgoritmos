@@ -214,6 +214,13 @@ public class Indicadores {
         return retorno;
     }
 
+    /**
+     * Retorna carteira baseada na força bruta.
+     * Gera 10-n! carteiras aleatorias e pega a de melhor retorno.
+     * @param n - numero de ativos escolhidos
+     * @return
+     * @throws IOException
+     */
     public Ativo[] retornaCarteiraBruta(int n) throws IOException {
         this.calculaIndicadores();
         float melhor = 0;
