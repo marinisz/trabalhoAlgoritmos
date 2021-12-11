@@ -19,5 +19,6 @@ jobs:
       - name: rodando
         working-directory: ./coletaDados/src
         run: |
+          ls
           find . -type f -name "*.java" -print | xargs javac -d diretorios
           java -cp "diretorios" src.Main
