@@ -12,4 +12,7 @@ jobs:
           java-version: '11'
           java-package: jdk
           architecture: x64
-      - run: ls
+      - name: Maven Package
+        run: mvn -B clean package -DskipTests
+      - name: Maven Verify
+        run: mvn -B clean verify
