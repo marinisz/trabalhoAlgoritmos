@@ -13,4 +13,4 @@ jobs:
           java-package: jdk
           architecture: x64
       - run: cd coletaDados
-        - run: ls
+      - run: ls
