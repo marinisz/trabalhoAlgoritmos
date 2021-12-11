@@ -14,4 +14,4 @@ jobs:
           java-version: '11'
           java-package: jdk
           architecture: x64
-      - run: java Main.java
+      - run: java src/Main.java
