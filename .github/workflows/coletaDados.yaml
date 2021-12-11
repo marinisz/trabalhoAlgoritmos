@@ -13,7 +13,5 @@ jobs:
           distribution: 'adopt'
       - name: Entrando pastas
         run: cd coletaDados
-      - name: Entrando pastas
-        run: cd coletaDados
-       - name: Entrando src
-       run: cd src
+      - name: Entrando pastas2
+        run: cd coletadados
