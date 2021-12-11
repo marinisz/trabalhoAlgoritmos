@@ -14,4 +14,4 @@ jobs:
           java-version: '11'
           java-package: jdk
           architecture: x64
-      - run: ls
+      - run: java -cp .coletaDados/src/Main.java
