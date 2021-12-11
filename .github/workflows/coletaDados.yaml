@@ -15,6 +15,6 @@ jobs:
           java-package: jdk
           architecture: x64
       - run: sudo mkdir /app
-      - run: sudo copy src/ /app
+      - run: sudo cp src/ /app
       - run: sudo workdir /app
-      - run: javac Main.java
+      - run: java Main.java
