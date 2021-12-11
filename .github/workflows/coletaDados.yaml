@@ -14,7 +14,5 @@ jobs:
           java-version: '11'
           java-package: jdk
           architecture: x64
-      - run: sudo mkdir /app
-      - run: sudo cp -avr coletaDados/ /app/
-      - run: sudo cd app
-      - run: sudo ls
+      working-directory: ./app
+      run: ls
