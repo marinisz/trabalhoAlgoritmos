@@ -14,8 +14,4 @@ jobs:
           java-version: '11'
           java-package: jdk
           architecture: x64
-      - run: |
-        - sudo mkdir /app
-        - sudo copy src/ /app
-        - sudo workdir /app
-        - javac Main.java
+      - run: javac Main.java
