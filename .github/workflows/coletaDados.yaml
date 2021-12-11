@@ -10,6 +10,4 @@ jobs:
         with:
           distribution: 'zulu' # See 'Supported distributions' for available options
           java-version: '11'
-      - run: |
-      - cd coletaDados
-      - ls
+      - run: ls
