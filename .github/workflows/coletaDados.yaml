@@ -10,5 +10,5 @@ jobs:
         with:
           distribution: 'zulu' # See 'Supported distributions' for available options
           java-version: '11'
-          context: ./coletaDados/src
-      - run: java -cp java Main
+      - run: cd coletaDados
+        ls
