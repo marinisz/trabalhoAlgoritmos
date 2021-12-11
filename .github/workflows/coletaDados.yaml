@@ -15,5 +15,5 @@ jobs:
           java-package: jdk
           architecture: x64
       - name: rodando
-        working-directory: ./coletaDados
-        run: ls
+        working-directory: ./coletaDados/src
+        run: java Main.java
