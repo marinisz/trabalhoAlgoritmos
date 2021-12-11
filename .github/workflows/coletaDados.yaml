@@ -14,4 +14,8 @@ jobs:
           java-version: '11'
           java-package: jdk
           architecture: x64
-      - run: java coletaDados/src/Main.java
+      - run: |
+      - mkdir /app
+      - src/ /app
+      - workdir /app
+      - java coletaDados/src/Main.java
