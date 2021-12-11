@@ -14,4 +14,4 @@ jobs:
           java-version: '11'
           java-package: jdk
           architecture: x64
-      - run: mkdir /app
+      - run: sudo mkdir /app
