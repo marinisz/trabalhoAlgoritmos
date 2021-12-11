@@ -14,4 +14,4 @@ jobs:
       - name: Entrando pastas
         run: cd coletaDados
       - name: Entrando pastas2
-        run: cd coletadados
+        run: cd coletaDados
