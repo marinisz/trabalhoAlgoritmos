@@ -12,6 +12,5 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
           architecture: x64
-      - name: Entrando pastas
       - run: find . -type f -name "*.java" -print | xargs javac -d classes
       - run: java -cp "classes" src.Test
