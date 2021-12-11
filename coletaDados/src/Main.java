@@ -70,7 +70,6 @@ public class Main {
         Portifolio portifolio3 = null;
         Portifolio portifolio4 = null;
         Portifolio portifolio31 = null;
-
         switch (tipo){
             //conservador
             case 1:
