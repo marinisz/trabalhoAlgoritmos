@@ -14,5 +14,5 @@ jobs:
           java-version: '11'
           java-package: jdk
           architecture: x64
-      working-directory: ./app
+      working-directory: ./coletaDados
       run: ls
