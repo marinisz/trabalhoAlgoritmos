@@ -11,5 +11,9 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
-      - name: Rodando códigos
+      - name: Entrando pastas
         run: cd coletaDados
+      - name: Pasta src
+        run: cd src
+      - name: Rodar codigo
+        run: javac Main.java
