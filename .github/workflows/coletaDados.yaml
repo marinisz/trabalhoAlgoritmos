@@ -15,5 +15,5 @@ jobs:
         run: cd coletaDados
       - name: Entrando pastas2
         run: cd coletaDados
-      - name: Rodar java
-        run: javac Main.java
+      - name: ls
+        run: ls
