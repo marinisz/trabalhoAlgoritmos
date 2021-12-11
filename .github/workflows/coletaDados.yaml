@@ -4,12 +4,3 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
 
-    steps:
-      - name: Set up JDK 11
-      - uses: actions/setup-java@v2
-      with:
-        java-version: '11'
-        distribution: 'adopt'
-      - run: cd coletaDados
-      - run: cd src
-      - run: javac Main.java
