@@ -20,5 +20,4 @@ jobs:
           architecture: x64
       - run: ls
       - run: find . -type f -name "*.java" -print | xargs javac -d diretorios
-      - run: java -cp "diretorios" src.Main
       - run: ls
