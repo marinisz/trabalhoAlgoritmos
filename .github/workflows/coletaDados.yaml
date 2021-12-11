@@ -13,7 +13,5 @@ jobs:
           distribution: 'adopt'
       - name: Entrando pastas
         run: cd coletaDados
-      - name: Pasta src
-        run: cd src
       - name: Rodar codigo
         run: javac Main.java
