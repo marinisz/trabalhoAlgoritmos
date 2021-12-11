@@ -1,13 +1,15 @@
 name: Algoritmos
+
 on:
   push:
     branches: [ master ]
 
   workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Algo
+    name: Algoritmos
     steps:
       - uses: actions/checkout@v2
       - name: Setup java
@@ -16,9 +18,7 @@ jobs:
           java-version: '11'
           java-package: jdk
           architecture: x64
-      - name: rodando
-        working-directory: ./coletaDados/src
-        run: |
-          ls
-          find . -type f -name "*.java" -print | xargs javac -d diretorios
-          java -cp "diretorios" src.Main
+      - run: ls
+      - run: find . -type f -name "*.java" -print | xargs javac -d diretorios
+      - run: java -cp "diretorios" src.Main
+      - run: ls
