@@ -1,13 +1,17 @@
 name: Algoritmos
-on: [push]
+on:
+  push:
+    branches: [ main ]
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Inicio
+    name: coletaDados
     steps:
       - uses: actions/checkout@v2
+      - name: Start JDK
       - uses: actions/setup-java@v2
         with:
-          distribution: 'zulu' # See 'Supported distributions' for available options
           java-version: '11'
+          java-package: jdk
+          architecture: x64
       - run: ls
