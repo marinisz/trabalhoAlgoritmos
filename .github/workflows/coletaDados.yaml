@@ -11,4 +11,5 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
+      - name: Rodando códigos
         run: cd coletaDados
