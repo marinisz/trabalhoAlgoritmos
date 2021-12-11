@@ -12,5 +12,4 @@ jobs:
           java-version: '11'
           java-package: jdk
           architecture: x64
-      - run: find . -type f -name "*.java" -print | xargs javac -d classes
-      - run: java -cp "classes" src.Main
+      - run: java -d ./src/Main.java
