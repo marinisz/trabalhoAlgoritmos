@@ -13,4 +13,4 @@ jobs:
           distribution: 'adopt'
           architecture: x64
       - run: find . -type f -name "*.java" -print | xargs javac -d classes
-      - run: java -cp Main
+      - run: java Main
