@@ -15,6 +15,4 @@ jobs:
           java-package: jdk
           architecture: x64
       - run: sudo mkdir /app
-      - run: sudo cp coletaDados/src/ /app
-      - run: sudo workdir /app
-      - run: java Main.java
+      - run: sudo cp -R /coletaDados /app
