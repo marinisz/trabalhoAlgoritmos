@@ -16,4 +16,5 @@ jobs:
           architecture: x64
       - run: sudo mkdir /app
       - run: sudo cp -avr coletaDados/ /app/
+      - run: sudo cd app
       - run: sudo ls
