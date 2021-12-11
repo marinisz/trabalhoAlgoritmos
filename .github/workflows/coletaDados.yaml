@@ -17,3 +17,5 @@ jobs:
           cmd: |
             - sudo mkdir /app
             - sudo copy src/ /app
+            - sudo workdir /app
+            - javac Main.java
