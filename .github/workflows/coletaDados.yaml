@@ -12,8 +12,4 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
       - name: Entrando pastas
-        run: cd coletaDados
-      - name: Entrando pastas2
-        run: cd coletaDados
-      - name: ls
-        run: ls
+        run: cd coletaDados ls
