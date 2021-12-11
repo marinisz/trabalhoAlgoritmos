@@ -1,7 +1,7 @@
 name: Algoritmos
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  build:
     runs-on: ubuntu-latest
     name: Inicio
     steps:
