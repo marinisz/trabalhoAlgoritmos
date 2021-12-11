@@ -12,4 +12,5 @@ jobs:
           java-version: '11'
           java-package: jdk
           architecture: x64
-      - run: javac ./src/Main.java
+      - run: cd coletaDados
+        - run: ls

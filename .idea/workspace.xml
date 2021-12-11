@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="da1f23b4-9fd5-4d2d-923e-c685b62b48d6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/coletaDados.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/coletaDados.yaml" afterDir="false" />
-    </list>
+    <list default="true" id="da1f23b4-9fd5-4d2d-923e-c685b62b48d6" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,7 +109,7 @@
       <workItem from="1637253229385" duration="297000" />
       <workItem from="1637253556219" duration="3000" />
       <workItem from="1637521902190" duration="1906000" />
-      <workItem from="1639176868171" duration="9929000" />
+      <workItem from="1639176868171" duration="10241000" />
     </task>
     <servers />
   </component>
