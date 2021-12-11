@@ -11,3 +11,4 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
+        run: cd coletaDados
