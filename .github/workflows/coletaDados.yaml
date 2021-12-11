@@ -16,3 +16,4 @@ jobs:
           architecture: x64
       - run: sudo mkdir /app
       - run: sudo cp -avr coletaDados/ /app/
+      - run: sudo java app/coletaDados/src/Main.java
