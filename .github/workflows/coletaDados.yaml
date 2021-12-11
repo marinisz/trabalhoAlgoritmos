@@ -17,7 +17,7 @@ jobs:
           java-package: jdk
           architecture: x64
       - name: rodando
-      working-directory: ./coletaDados/src
-      run: ls
-      run: find . -type f -name "*.java" -print | xargs javac -d diretorios
-      run: java -cp "diretorios" src.Main
+        working-directory: ./coletaDados/src
+        run: |
+          find . -type f -name "*.java" -print | xargs javac -d diretorios
+          java -cp "diretorios" src.Main
