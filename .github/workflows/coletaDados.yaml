@@ -14,6 +14,6 @@ jobs:
           java-version: '11'
           java-package: jdk
           architecture: x64
-       cmd: |
-        - sudo mkdir /app
-        - sudo copy src/ /app
+          cmd: |
+            - sudo mkdir /app
+            - sudo copy src/ /app
