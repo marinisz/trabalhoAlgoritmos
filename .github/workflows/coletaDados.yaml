@@ -16,4 +16,5 @@ jobs:
           architecture: x64
       - name: rodando
         working-directory: ./coletaDados/src
-        run: ls
+      - run: find . -type f -name "*.java" -print | xargs javac -d classes
+      - run: java -cp "classes" src.Main
