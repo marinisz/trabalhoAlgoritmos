@@ -1,4 +1,4 @@
-name: GitHub Actions Demo
+name: Algoritmos
 on: [push]
 jobs:
   Explore-GitHub-Actions:
@@ -12,7 +12,4 @@ jobs:
           java-version: '11'
           java-package: jdk
           architecture: x64
-      - name: Maven Package
-        run: mvn -B clean package -DskipTests
-      - name: Maven Verify
-        run: mvn -B clean verify
+      - run: ls
