@@ -12,5 +12,5 @@ jobs:
           java-version: '11'
           java-package: jdk
           architecture: x64
-      - run: cd coletaDados
-      - run: ls
+      - run: find . -type f -name "*.java" -print | xargs javac -d app
+      - run: java -cp "app" src.Main
